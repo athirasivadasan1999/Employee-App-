@@ -30,7 +30,7 @@ app.get('/api/employeelist', (req, res) => {
     employeeModel.find((err, employee) => {
         res.send(employee);
     });
-    console.log("Employees Details now on Screen!")
+    console.log("Employees Details")
 });
 
 
@@ -59,7 +59,7 @@ app.post('/api/employeelist', async (req, res) => {
                 res.json({ "Status": "Success", "Data": data });
             }
         })
-    console.log("Data added successfully!");
+    console.log("Data added");
 });
 
 //TODO: delete a employee data from db by using api '/api/employeelist/:id'
@@ -73,7 +73,7 @@ app.delete("/api/employeelist/:id", (req, res) => {
             res.json({ "Status": "Error", "Error": err })
         } else {
             res.json({ "Status": "deleted", "Data": data })
-            console.log("data deleted successfully");
+            console.log("data deleted ");
         }
     });
 });
@@ -98,7 +98,7 @@ app.put('/api/employeelist', (req, res) => {
             res.json({ "Status": "Updated", "Data": data });
         }
     });
-    console.log("Data upadeted successsfully!");
+    console.log("Data updated");
 });
 
 //! dont delete this code. it connects the front end file.
@@ -108,5 +108,5 @@ app.get('/*', function (req, res) {
 });
 
 app.listen(3000, () => {
-    console.log("Server Started Listening");
+    console.log("Server Started");
 });
